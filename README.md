@@ -1,4 +1,4 @@
-# Tutorial Laravel Mac
+# Tutorial de instalação Mac
 
 ## Composer
 
