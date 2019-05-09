@@ -23,3 +23,10 @@ mv composer.phar /usr/local/bin/composer
 ```
 composer -V
 ```
+
+## Laravel
+
+#### Via composer create-project
+```
+composer create-project --prefer-dist laravel/laravel app
+```
