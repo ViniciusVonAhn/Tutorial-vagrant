@@ -109,19 +109,45 @@ sites:
     - map: blog.dev # endereço que iremos utilizar para acessar a nossa aplicação através do navegador
       to: /home/vagrant/blog/public # em folders nós colocamos o endereço e aqui nós estamos informando que o nosso index.php está dentro da pasta public
 ```
-Estamos quase terminando, como nós alteramos o arquivo Homestead.yaml precisar fazer um reload do Homestead, para isso vamos para a pasta do Homestead
+Para não precisarmos sempre ir até a pasta do homestead para executar os comandos, vamos fazer um simples configuracão, mas para isso precisamos ir na pasta do Homestead, pela ultima vez pois depois disso você pode executar comandos como homestead up ou homestead ssh de qualquer lugar em seu sistema.
 ```
 cd ~/Homestead
 ```
-Agora que estamos dentro da pasta, iremos executar o comando abaixo:
+Agora que estamos dentro da pasta, vamos executar o comando abaixo
 ```
-vagrant reload --provision
+function homestead() {
+    ( cd ~/Homestead && vagrant $* )
+}
+```
+Pronto, agora não precisamos mais voltar aqui e sempre que formos utilizar um comando, não mais usaremos o vagrant e sim o homestead.
+Estamos quase terminando, como nós alteramos o arquivo Homestead.yaml precisar fazer um reload do Homestead.
+
+```
+homestead reload --provision
 ```
 Então para finalizarmos, precisamos editar o arquivo hosts do nosso sistema para informar que blog.dev é uma url local, para fazer isso é só abrir o arquivo hosts que fica na pasta etc. Ao abrir esse arquivo nós vamos adicionar mais uma linha com o conteúdo abaixo: Não podemos esquecer que o ip e o endereço(é o "-map" que defimos em "sites:") tem que ser o mesmo que está no arquivo Homestead.yaml
 ```
 192.168.10.10	blog.dev
 ```
 Pronto agora você já pode abrir o seu navegador e acessar a url blog.dev
+### Informações adicionais
+Para desligar o servidor é só utilizar o comando:
+```
+homestead halt
+```
+Para inicar:
+```
+homestead up
+```
+Para entrar na maquina virtual:
+```
+homestead ssh
+```
+Em caso de alteração do arquivo Homestead.yaml:
+```
+homestead reload --provision
+```
+
 
 
 
