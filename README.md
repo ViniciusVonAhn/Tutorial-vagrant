@@ -154,7 +154,7 @@ Visualizar o status das maquinas:
 homestead global -status
 ```
 
-## Tutorial de instalação Homestead Windows
+# Tutorial de instalação Homestead Windows
 
 ### Baixar e instalar o [virtual box](https://www.virtualbox.org/wiki/Downloads) e [vagrant](https://www.vagrantup.com)
 
