@@ -1,4 +1,4 @@
-# Prodigious Day #2
+# Prodigious Day #2 - Tutorial para MAC, WINDOWS e LINUX
 
 ## Tutorial de instalação Homestead Mac 
 
@@ -125,7 +125,7 @@ Pronto, agora não precisamos mais voltar aqui e sempre que formos utilizar um c
 Estamos quase terminando, como nós alteramos o arquivo Homestead.yaml precisamos fazer um reload do Homestead.
 
 ```
-homestead reload --provision
+homestead up
 ```
 Então para finalizarmos, precisamos editar o arquivo hosts do nosso sistema para informar que blog.dev é uma url local, para fazer isso é só abrir o arquivo hosts que fica na pasta etc. Não podemos esquecer que o ip e o endereço(é o "-map" que defimos em "sites:") tem que ser o mesmo que está no arquivo Homestead.yaml. Ao abrir esse arquivo nós vamos adicionar mais uma linha com o conteúdo abaixo: 
 ```
@@ -162,23 +162,9 @@ Para verificar se o vagrant foi instalado corretamente basta utilizar o código 
 ```
 vagrant --version
 ```
-### Composer
-```
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-```
-```
-php -r "if (hash_file('sha384', 'composer-setup.php') === '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-```
-```
-php composer-setup.php
-```
-```
-php -r "unlink('composer-setup.php');"
-```
-```
-mv composer.phar /usr/local/bin/composer
-```
+### Baixar e instalar o [composer](https://getcomposer.org/download/)
 #### Verificar a instalação
+reinicie o terminal e execute o comando abaixo:
 ```
 composer -V
 ```
@@ -253,9 +239,9 @@ Feito isso nós iremos utilizar o composer para criar o projeto com laravel, a u
 ```
 composer create-project --prefer-dist laravel/laravel blog
 ```
-Agora vamos ir para a pasta do Homestead que está na home e editaremos o arquivo Homestead.yaml
+Agora vamos ir para a pasta do Homestead que está na home e editaremos o arquivo Homestead.yaml, se você tiver somente o arquivo Homestead.yaml.example não tem problema, pode usar ele, mas terá que renomear para Homestead.yaml
 ```
-C:\Users\%username%\Homestead
+cd C:\Users\Homestead
 ```
 Abra o arquivo Homestead.yaml com algum editor de texto. 
 Vamos editar os folders, não podemos esquecer que lá em documentos nós criamos uma pasta chamada dev e é dentro dela que está o nosso projeto e como o projeto que nós criamos tem o nome blog, o nosso folder ficaria assim:
@@ -274,9 +260,9 @@ Estamos quase terminando, como nós alteramos o arquivo Homestead.yaml precisamo
 ```
 C:\Users\%username%\Homestead
 ```
-Agora vamos executar o comando para atualizar o arquivo
+Agora vamos executar o comando para iniciar
 ```
-vagrant reload --provision
+vagrant up 
 ```
 Então para finalizarmos, precisamos editar o arquivo hosts do nosso sistema para informar que blog.dev é uma url local, para fazer isso é só abrir o bloco de notas em modo administrador e depois vamos em aquivo -> abrir.. e procuramos o endereço C:\Windows\System32\drivers\etc\hosts ao abrir, na parte de localhost name,  a gente adiciona a linha abaixo que é referente ao ip e endereço que configuramos no homestead.yaml, Não podemos esquecer que o ip e o endereço(é o "-map" que defimos em "sites:")
 ```
