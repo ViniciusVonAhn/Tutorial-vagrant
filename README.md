@@ -96,7 +96,7 @@ Agora vamos ir para a pasta do Homestead que está na home e editaremos o arquiv
 ```
 cd ~/Homestead
 ```
-Abra o arquivo Homestead.yaml com algum editor de texto
+Abra o arquivo Homestead.yaml com algum editor de texto. 
 Vamos editar os folders, não podemos esquecer que lá em documentos nós criamos uma pasta chamada dev e é dentro dela que está o nosso projeto e como o projeto que nós criamos tem o nome blog, o nosso folder ficaria assim:
 ```
 folders:
@@ -109,7 +109,7 @@ sites:
     - map: blog.dev # endereço que iremos utilizar para acessar a nossa aplicação através do navegador
       to: /home/vagrant/blog/public # em folders nós colocamos o endereço e aqui nós estamos informando que o nosso index.php está dentro da pasta public
 ```
-Para não precisarmos sempre ir até a pasta do homestead para executar os comandos, vamos fazer um simples configuracão, mas para isso precisamos ir na pasta do Homestead, pela ultima vez pois depois disso você pode executar comandos como homestead up ou homestead ssh de qualquer lugar em seu sistema.
+Para não precisarmos sempre ir até a pasta do homestead para executar os comandos, vamos fazer um simples configuracão, mas para isso precisamos ir na pasta do Homestead pela ultima vez, pois depois disso você pode executar comandos como homestead up ou homestead ssh de qualquer lugar do seu sistema.
 ```
 cd ~/Homestead
 ```
@@ -120,12 +120,12 @@ function homestead() {
 }
 ```
 Pronto, agora não precisamos mais voltar aqui e sempre que formos utilizar um comando, não mais usaremos o vagrant e sim o homestead.
-Estamos quase terminando, como nós alteramos o arquivo Homestead.yaml precisar fazer um reload do Homestead.
+Estamos quase terminando, como nós alteramos o arquivo Homestead.yaml precisamos fazer um reload do Homestead.
 
 ```
 homestead reload --provision
 ```
-Então para finalizarmos, precisamos editar o arquivo hosts do nosso sistema para informar que blog.dev é uma url local, para fazer isso é só abrir o arquivo hosts que fica na pasta etc. Ao abrir esse arquivo nós vamos adicionar mais uma linha com o conteúdo abaixo: Não podemos esquecer que o ip e o endereço(é o "-map" que defimos em "sites:") tem que ser o mesmo que está no arquivo Homestead.yaml
+Então para finalizarmos, precisamos editar o arquivo hosts do nosso sistema para informar que blog.dev é uma url local, para fazer isso é só abrir o arquivo hosts que fica na pasta etc. Não podemos esquecer que o ip e o endereço(é o "-map" que defimos em "sites:") tem que ser o mesmo que está no arquivo Homestead.yaml. Ao abrir esse arquivo nós vamos adicionar mais uma linha com o conteúdo abaixo: 
 ```
 192.168.10.10	blog.dev
 ```
