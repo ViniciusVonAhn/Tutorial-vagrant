@@ -108,7 +108,7 @@ folders:
 Agora iremos editar a parte de sites:
 ```
 sites:
-    - map: blog.dev # endereço que iremos utilizar para acessar a nossa aplicação através do navegador
+    - map: blog.code # endereço que iremos utilizar para acessar a nossa aplicação através do navegador
       to: /home/vagrant/blog/public # em folders nós colocamos o endereço e aqui nós estamos informando que o nosso index.php está dentro da pasta public
 ```
 Para não precisarmos sempre ir até a pasta do homestead para executar os comandos, vamos fazer um simples configuracão, mas para isso precisamos ir na pasta do Homestead pela ultima vez, pois depois disso você pode executar comandos como homestead up ou homestead ssh de qualquer lugar do seu sistema.
@@ -129,7 +129,7 @@ homestead up
 ```
 Então para finalizarmos, precisamos editar o arquivo hosts do nosso sistema para informar que blog.dev é uma url local, para fazer isso é só abrir o arquivo hosts que fica na pasta etc. Não podemos esquecer que o ip e o endereço(é o "-map" que defimos em "sites:") tem que ser o mesmo que está no arquivo Homestead.yaml. Ao abrir esse arquivo nós vamos adicionar mais uma linha com o conteúdo abaixo: 
 ```
-192.168.10.10	blog.dev
+192.168.10.10	blog.code
 ```
 Pronto, agora você já pode abrir o seu navegador e acessar a url blog.dev
 ### Informações adicionais
@@ -189,7 +189,7 @@ git --version
 ```
 Agora vamos para a home
 ```
-cd C:\Users\%username%
+cd C:\
 ```
 Iremos clonar o repositório do homestead:
 ```
@@ -205,7 +205,7 @@ init.bat
 ```
 Voltaremos para a home:
 ```
-cd C:\Users\%username%
+cd C:\
 ```
 Aqui iremos gerar a chave ssh para acessar o homestead, nesse exemplo iremos deixar o nome do arquivo padrão e sem senha, então é só digitar o comando abaixo e apertar enter 4 vezes.
 ```
@@ -241,7 +241,7 @@ composer create-project --prefer-dist laravel/laravel blog
 ```
 Agora vamos ir para a pasta do Homestead que está na home e editaremos o arquivo Homestead.yaml, se você tiver somente o arquivo Homestead.yaml.example não tem problema, pode usar ele, mas terá que renomear para Homestead.yaml
 ```
-cd C:\Users\Homestead
+cd C:\Homestead
 ```
 Abra o arquivo Homestead.yaml com algum editor de texto. 
 Vamos editar os folders, não podemos esquecer que lá em documentos nós criamos uma pasta chamada dev e é dentro dela que está o nosso projeto e como o projeto que nós criamos tem o nome blog, o nosso folder ficaria assim:
@@ -253,12 +253,12 @@ folders:
 Agora iremos editar a parte de sites:
 ```
 sites:
-    - map: blog.dev # endereço que iremos utilizar para acessar a nossa aplicação através do navegador
+    - map: blog.code # endereço que iremos utilizar para acessar a nossa aplicação através do navegador
       to: /home/vagrant/blog/public # em folders nós colocamos o endereço e aqui nós estamos informando que o nosso index.php está dentro da pasta public
 ```
 Estamos quase terminando, como nós alteramos o arquivo Homestead.yaml precisamos fazer um reload do Homestead, para isso precisar ir na pasta do homestead
 ```
-C:\Users\%username%\Homestead
+cd C:\Homestead
 ```
 Agora vamos executar o comando para iniciar
 ```
@@ -266,7 +266,7 @@ vagrant up
 ```
 Então para finalizarmos, precisamos editar o arquivo hosts do nosso sistema para informar que blog.dev é uma url local, para fazer isso é só abrir o bloco de notas em modo administrador e depois vamos em aquivo -> abrir.. e procuramos o endereço C:\Windows\System32\drivers\etc\hosts ao abrir, na parte de localhost name,  a gente adiciona a linha abaixo que é referente ao ip e endereço que configuramos no homestead.yaml, Não podemos esquecer que o ip e o endereço(é o "-map" que defimos em "sites:")
 ```
-192.168.10.10 blog.dev
+192.168.10.10 blog.code
 ```
 Pronto, agora você já pode abrir o seu navegador e acessar a url blog.dev
 
