@@ -88,7 +88,7 @@ Agora vamos entrar dentro da pasta dev
 ```
 cd ~/Documents/dev
 ```
-Feito isso nós iremos utilizar o composer para criar o projeto em laravel, a ultima palavra é o nome do projeto, que nesse caso é blog
+Feito isso nós iremos utilizar o composer para criar o projeto com laravel, a ultima palavra é o nome do projeto, que nesse caso é blog
 ```
 composer create-project --prefer-dist laravel/laravel blog
 ```
@@ -97,8 +97,31 @@ Agora vamos ir para a pasta do Homestead que está na home e editaremos o arquiv
 cd ~/Homestead
 ```
 Abra o arquivo Homestead.yaml com algum editor de texto
-
-
+Vamos editar os folders, não podemos esquecer que lá em documentos nós criamos uma pasta chamada dev e é dentro dela que está o nosso projeto e como o projeto que nós criamos tem o nome blog, o nosso folder ficaria assim:
+```
+folders:
+    - map: ~/Documents/dev/blog # Mapeando onde o projeto se encontra
+      to: /home/vagrant/blog # Mapeando para onde iremos enviar o projeto dentro do Homestead
+```
+Agora iremos editar a parte de sites:
+```
+sites:
+    - map: blog.dev # endereço que iremos utilizar para acessar a nossa aplicação através do navegador
+      to: /home/vagrant/blog/public # em folders nós colocamos o endereço e aqui nós estamos informando que o nosso index.php está dentro da pasta public
+```
+Estamos quase terminando, como nós alteramos o arquivo Homestead.yaml precisar fazer um reload do Homestead, para isso vamos para a pasta do Homestead
+```
+cd ~/Homestead
+```
+Agora que estamos dentro da pasta, iremos executar o comando abaixo:
+```
+vagrant reload --provision
+```
+Então para finalizarmos, precisamos editar o arquivo hosts do nosso sistema para informar que blog.dev é uma url local, para fazer isso é só abrir o arquivo hosts que fica na pasta etc. Ao abrir esse arquivo nós vamos adicionar mais uma linha com o conteúdo abaixo: Não podemos esquecer que o ip e o endereço(é o "-map" que defimos em "sites:") tem que ser o mesmo que está no arquivo Homestead.yaml
+```
+192.168.10.10	blog.dev
+```
+Pronto agora você já pode abrir o seu navegador e acessar a url blog.dev
 
 
 
