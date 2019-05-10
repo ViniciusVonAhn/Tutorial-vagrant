@@ -83,11 +83,20 @@ The key's randomart image is:
 |   .             |
 +----[SHA256]-----+
 ```
+Bom, agora iremos criar uma pasta dentro de Documentos, você pode pode colocar qualquer nome, nesse exemplo o nome da pasta será dev.
+Agora vamos entrar dentro da pasta dev
+```
+cd ~/Documents/dev
+```
+Feito isso nós iremos utilizar o composer para criar o projeto em laravel, a ultima palavra é o nome do projeto, que nesse caso é blog
+```
+composer create-project --prefer-dist laravel/laravel blog
+```
 Agora vamos ir para a pasta do Homestead que está na home e editaremos o arquivo Homestead.yaml
 ```
 cd ~/Homestead
 ```
-Dentro do arquivo
+Abra o arquivo Homestead.yaml com algum editor de texto
 
 
 
