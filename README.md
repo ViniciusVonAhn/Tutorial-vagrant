@@ -1,11 +1,13 @@
 # Tutorial de instalação Mac
 
-## Composer - Virtual box - Vangrant/Homestead - Laravel
+### Baixar e instalar o [virtual box](https://www.virtualbox.org/wiki/Downloads) e [vagrant](https://www.vagrantup.com)
+
+Para verificar se o vagrant foi instalado corretamente basta utilizar o código abaixo no terminal:
+```
+vagrant --version
+```
 
 ### Composer
-
-#### Instalação
-
 ```
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 ```
@@ -26,9 +28,68 @@ mv composer.phar /usr/local/bin/composer
 composer -V
 ```
 
-## Laravel
+### Homestead
+```
+vagrant box add laravel/homestead
+```
+Vamos verificar se funcionou, digite o comando abaixo:
+```
+vagrant box list
+```
+Deve ter aparecido algo como isso:
+```
+laravel/homestead   (virtualbox, 7.2.1)
+```
+Agora vamos para a home:
+```
+cd ~
+```
+Iremos clonar o repositório do homestead:
+```
+git clone https://github.com/laravel/homestead.git ~/Homestead
+```
+Entreremos na pasta que foi criada com o nome de Homestead:
+```
+cd Homestead
+```
+Vamos iniciar o homestead
+```
+bash init.sh
+```
+Voltaremos para a home:
+```
+cd ~
+```
+Aqui iremos gerar a chave ssh para acessar o homestead, nesse exemplo iremos deixar o nome do arquivo padrão e sem senha, então é só digitar o comando abaixo e apertar enter 4 vezes.
+```
+ssh-keygen -t rsa -C "seu-email@exemplo.com"
+```
+Seu terminal deve ter mostrado algo parecido com o exemplo abaixo
+```
+Your identification has been saved in /Users/seu-username/.ssh/id_rsa.
+Your public key has been saved in /Users/seu-usermame/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:YyMboVNV7XR1ED99wNFEJQJlTpDvGIA4b07KAKrdtGs seu-email@exemplo.com
+The key's randomart image is:
++---[RSA 2048]----+
+|     . ...+*=.*OB|
+|.   o ... .+o.o++|
+|..   oo  . +.. .+|
+|. . .o+.  . o   o|
+|.. =o*o S  +     |
+|. . =..= o. .    |
+|     ..          |
+|    E            |
+|   .             |
++----[SHA256]-----+
+```
+Agora vamos ir para a pasta do Homestead que está na home e editaremos o arquivo Homestead.yaml
+```
+cd ~/Homestead
+```
+Dentro do arquivo
 
-#### Via composer create-project
-```
-composer create-project --prefer-dist laravel/laravel app
-```
+
+
+
+
