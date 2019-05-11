@@ -247,7 +247,7 @@ Abra o arquivo Homestead.yaml com algum editor de texto.
 Vamos editar os folders, não podemos esquecer que lá em documentos nós criamos uma pasta chamada dev e é dentro dela que está o nosso projeto e como o projeto que nós criamos tem o nome blog, o nosso folder ficaria assim:
 ```
 folders:
-    - map: ~/Documents/dev # Mapeando onde o projeto se encontra
+    - map: ~/Documents/dev/blog # Mapeando onde o projeto se encontra
       to: /home/vagrant/blog # Mapeando para onde iremos enviar o projeto dentro do Homestead
 ```
 Agora iremos editar a parte de sites:
