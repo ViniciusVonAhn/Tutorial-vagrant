@@ -128,11 +128,11 @@ Estamos quase terminando, como nós alteramos o arquivo Homestead.yaml precisamo
 ```
 homestead up
 ```
-Então para finalizarmos, precisamos editar o arquivo hosts do nosso sistema para informar que blog.dev é uma url local, para fazer isso é só abrir o arquivo hosts que fica na pasta etc. Não podemos esquecer que o ip e o endereço(é o "-map" que defimos em "sites:") tem que ser o mesmo que está no arquivo Homestead.yaml. Ao abrir esse arquivo nós vamos adicionar mais uma linha com o conteúdo abaixo: 
+Então para finalizarmos, precisamos editar o arquivo hosts do nosso sistema para informar que blog.code é uma url local, para fazer isso é só abrir o arquivo hosts que fica na pasta etc. Não podemos esquecer que o ip e o endereço(é o "-map" que defimos em "sites:") tem que ser o mesmo que está no arquivo Homestead.yaml. Ao abrir esse arquivo nós vamos adicionar mais uma linha com o conteúdo abaixo: 
 ```
 192.168.10.10	blog.code
 ```
-Pronto, agora você já pode abrir o seu navegador e acessar a url blog.dev
+Pronto, agora você já pode abrir o seu navegador e acessar a url blog.code
 ### Informações adicionais
 Para desligar o servidor é só utilizar o comando:
 ```
@@ -266,11 +266,11 @@ Agora vamos executar o comando para iniciar
 ```
 vagrant up 
 ```
-Então para finalizarmos, precisamos editar o arquivo hosts do nosso sistema para informar que blog.dev é uma url local, para fazer isso é só abrir o bloco de notas em modo administrador e depois vamos em aquivo -> abrir.. e procuramos o endereço C:\Windows\System32\drivers\etc\hosts ao abrir, na parte de localhost name,  a gente adiciona a linha abaixo que é referente ao ip e endereço que configuramos no homestead.yaml, Não podemos esquecer que o ip e o endereço(é o "-map" que defimos em "sites:")
+Então para finalizarmos, precisamos editar o arquivo hosts do nosso sistema para informar que blog.code é uma url local, para fazer isso é só abrir o bloco de notas em modo administrador e depois vamos em aquivo -> abrir.. e procuramos o endereço C:\Windows\System32\drivers\etc\hosts ao abrir, na parte de localhost name,  a gente adiciona a linha abaixo que é referente ao ip e endereço que configuramos no homestead.yaml, Não podemos esquecer que o ip e o endereço(é o "-map" que defimos em "sites:")
 ```
 192.168.10.10 blog.code
 ```
-Pronto, agora você já pode abrir o seu navegador e acessar a url blog.dev
+Pronto, agora você já pode abrir o seu navegador e acessar a url blog.code
 
 ### Informações adicionais, sempre dentro da pasta do Homestead
 Para desligar o servidor é só utilizar o comando:
