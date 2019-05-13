@@ -1,6 +1,6 @@
-# Prodigious Day #2 - Tutorial para MAC, WINDOWS e LINUX
+# Prodigious Day #2 - Tutorial para MAC, LINUX e WINDOWS
 
-## Tutorial de instalação Homestead Mac 
+## Tutorial de instalação Homestead MAC/LINUX 
 
 ### Baixar e instalar o [virtual box](https://www.virtualbox.org/wiki/Downloads) e [vagrant](https://www.vagrantup.com)
 
