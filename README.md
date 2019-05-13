@@ -152,7 +152,7 @@ homestead reload --provision
 ```
 Visualizar o status das maquinas:
 ```
-homestead global -status
+homestead global-status
 ```
 
 # Tutorial de instalação Homestead Windows
@@ -291,7 +291,7 @@ vagrant reload --provision
 ```
 Visualizar o status das maquinas:
 ```
-vagrant global -status
+vagrant global-status
 ```
 
 
