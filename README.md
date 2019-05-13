@@ -104,13 +104,13 @@ Vamos editar os folders, não podemos esquecer que lá em documentos nós criamo
 ```
 folders:
     - map: ~/Documents/dev # Mapeando onde o projeto se encontra
-      to: /home/vagrant/blog # Mapeando para onde iremos enviar o projeto dentro do Homestead
+      to: /home/vagrant/dev # Mapeando para onde iremos enviar o projeto dentro do Homestead
 ```
 Agora iremos editar a parte de sites:
 ```
 sites:
     - map: blog.code # endereço que iremos utilizar para acessar a nossa aplicação através do navegador
-      to: /home/vagrant/blog/public # em folders nós colocamos o endereço e aqui nós estamos informando que o nosso index.php está dentro da pasta public
+      to: /home/vagrant/dev/blog/public # em folders nós colocamos o endereço e aqui nós estamos informando que o nosso index.php está dentro da pasta public
 ```
 Para não precisarmos sempre ir até a pasta do homestead para executar os comandos, vamos fazer um simples configuracão, mas para isso precisamos ir na pasta do Homestead pela ultima vez, pois depois disso você pode executar comandos como homestead up ou homestead ssh de qualquer lugar do seu sistema.
 ```
@@ -249,14 +249,14 @@ Abra o arquivo Homestead.yaml com algum editor de texto.
 Vamos editar os folders, não podemos esquecer que lá em documentos nós criamos uma pasta chamada dev e é dentro dela que está o nosso projeto e como o projeto que nós criamos tem o nome blog, o nosso folder ficaria assim:
 ```
 folders:
-    - map: ~/Documents/dev/blog # Mapeando onde o projeto se encontra
-      to: /home/vagrant/blog # Mapeando para onde iremos enviar o projeto dentro do Homestead
+    - map: ~/Documents/dev # Mapeando onde o projeto se encontra
+      to: /home/vagrant/dev # Mapeando para onde iremos enviar o projeto dentro do Homestead
 ```
 Agora iremos editar a parte de sites:
 ```
 sites:
     - map: blog.code # endereço que iremos utilizar para acessar a nossa aplicação através do navegador
-      to: /home/vagrant/blog/public # em folders nós colocamos o endereço e aqui nós estamos informando que o nosso index.php está dentro da pasta public
+      to: /home/vagrant/dev/blog/public # em folders nós colocamos o endereço e aqui nós estamos informando que o nosso index.php está dentro da pasta public
 ```
 Estamos quase terminando, como nós alteramos o arquivo Homestead.yaml precisamos fazer um reload do Homestead, para isso precisar ir na pasta do homestead
 ```
