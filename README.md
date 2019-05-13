@@ -34,6 +34,7 @@ composer -V
 ```
 vagrant box add laravel/homestead
 ```
+Após digitar o códgo a cima ele irá pedir para você indecar qual maquiná virtual instalor na sua máquina, nesse caso é o virtualbox.
 Vamos verificar se funcionou, digite o comando abaixo:
 ```
 vagrant box list
@@ -173,6 +174,7 @@ composer -V
 ```
 vagrant box add laravel/homestead
 ```
+Após digitar o códgo a cima ele irá pedir para você indecar qual maquiná virtual instalor na sua máquina, nesse caso é o virtualbox.
 Vamos verificar se funcionou, digite o comando abaixo:
 ```
 vagrant box list
